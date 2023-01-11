@@ -13,10 +13,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'dashboard', pathMatch: 'full', redirectTo: 'dashboard/customer-sales' },
   { path: 'dashboard', component: DashboardComponent, children: [
     { path: 'customer-sales', component: CustomerSalesComponent },
     { path: 'upload-documents', component: UploadDocumentComponent },
-    { path: 'change-password', component: ChangePasswordComponent }
+    { path: 'change-password', component: ChangePasswordComponent },
   ]}
 ];
 
