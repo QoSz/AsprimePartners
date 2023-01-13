@@ -4,9 +4,13 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     grid-template-rows: 11.5fr 0.5fr;
-    grid-template-areas: 
+    grid-template-areas:
         "sidebar content"
         "sidebar footer";
+}
+
+.mobile-navbar {
+    display: none;
 }
 
 $border-color: rgb(213, 213, 213);
@@ -16,7 +20,7 @@ $border-color: rgb(213, 213, 213);
     // background-color: aqua;
     display: grid;
     grid-template-rows: 3fr 9fr;
-    grid-template-areas: 
+    grid-template-areas:
         "logo"
         "sidenav";
     border-right: 1px solid $border-color;
@@ -29,7 +33,7 @@ $border-color: rgb(213, 213, 213);
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid $border-color;
-        
+
     }
 
     .side-nav-btn-area {
@@ -63,10 +67,10 @@ $border-color: rgb(213, 213, 213);
     // background-color: rgb(255, 116, 41);
     display: grid;
     grid-template-rows: 1fr 11fr;
-    grid-template-areas: 
+    grid-template-areas:
         "title"
         "main";
-    
+
     .title-area {
         grid-area: title;
         // background-color: rgb(255, 255, 0);
@@ -90,4 +94,24 @@ $border-color: rgb(213, 213, 213);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 767px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 11fr 0.5fr;
+        grid-template-areas:
+            "mobile-navbar"
+            "content"
+            "footer";
+    }
+
+    .mobile-navbar {
+        display: block;
+        grid-area: mobile-navbar;
+    }
+
+    .side-nav {
+        display: none;
+    }
 }

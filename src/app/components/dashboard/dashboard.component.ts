@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   constructor(private location: Location  ) {}
 
   ngOnInit() {
-    const fullUrl = this.location.path().replace('/dashboard/', '');
+    const fullUrl: string = this.location.path().replace('/dashboard/', '');
     if (fullUrl == "customer-sales") {
       this.title = "Customer Sales";
     } else if (fullUrl == "upload-documents") {
@@ -24,4 +24,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  updatePageTitle(title: string): void {
+    this.title = title;
+  }
 }
