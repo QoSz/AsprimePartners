@@ -1,1 +1,8 @@
-<p>upload-document works!</p>
+<div class="upload-container">
+    <ngx-dropzone (change)="onSelect($event)" [expandable]="true">
+        <ngx-dropzone-label>Select a file or Drag here</ngx-dropzone-label>
+        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+            <ngx-dropzone-label class="file-labels">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
+    </ngx-dropzone>
+</div>

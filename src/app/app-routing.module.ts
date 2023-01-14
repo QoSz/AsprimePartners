@@ -18,7 +18,9 @@ const routes: Routes = [
     { path: 'customer-sales', component: CustomerSalesComponent },
     { path: 'upload-documents', component: UploadDocumentComponent },
     { path: 'change-password', component: ChangePasswordComponent },
-  ]}
+  ]},
+  { path: '**', redirectTo: '/page-not-found' },
+  { path: 'page-not-found', component: LoginComponent }
 ];
 
 @NgModule({

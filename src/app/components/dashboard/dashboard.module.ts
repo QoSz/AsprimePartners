@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CustomerSalesComponent } from './components/customer-sales/customer-sales.component';
 import { UploadDocumentComponent } from './components/upload-document/upload-document.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
-
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgxDropzoneModule
   ]
 })
 export class DashboardModule { }
