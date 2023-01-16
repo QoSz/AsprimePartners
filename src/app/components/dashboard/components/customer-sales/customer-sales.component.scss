@@ -19,9 +19,25 @@
 
 @media (max-width: 767px) {
     .table-container {
-        overflow-x: auto;
         padding: 0.9rem;
         margin-bottom: 1rem;
+    }
+}
+
+:host-context(.main-area) {
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+@media (max-width: 500px) {
+    :host-context(.main-area) {
+        justify-content: unset;
+    }
+
+    .table-container {
+        border: none;
+        box-shadow: none;
     }
 }
 

@@ -4,16 +4,15 @@
     <div class="mobile-navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Asprime Partners</a>
+                <a class="navbar-brand" routerLink="/dashboard" (click)="updatePageTitle('Customer Sales')">Asprime <span style="color: orange">Partners</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active" aria-current="page" routerLink="customer-sales" (click)="updatePageTitle('Customer Sales')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faSackDollar"></fa-icon> Customer Sales</a>
+                        <a class="nav-link" routerLink="upload-documents" (click)="updatePageTitle('Upload Document')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faCloudArrowUp"></fa-icon> Upload Document</a>
+                        <a class="nav-link" routerLink="change-password" (click)="updatePageTitle('Change Password')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faKey"></fa-icon> Change Password</a>
                     </div>
                 </div>
             </div>
@@ -24,7 +23,7 @@
 
     <div class="side-nav">
         <div class="logo-area">
-            <img src="assets/Images/logo.png" alt="Asprime Partners logo" width="230rem" height="auto" />
+            <img src="assets/Images/logo.png" alt="Asprime Partners logo" width="230rem" height="auto" routerLink="customer-sales" (click)="updatePageTitle('Customer Sales')"/>
         </div>
         <div class="side-nav-btn-area">
               <a routerLink="customer-sales"><button class="btn" (click)="updatePageTitle('Customer Sales')"><fa-icon [icon]="faSackDollar"></fa-icon>  Customer Sales</button></a>
