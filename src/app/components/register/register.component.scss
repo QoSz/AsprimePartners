@@ -35,6 +35,16 @@
         background-color: rgb(252, 252, 252);
         box-shadow: 0 0 10px 0 rgba(48, 48, 48, 0.2);
     }
+
+    a {
+        color: black;
+        text-decoration: none;
+
+        span {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    }
 }
 
 .footer-area {
