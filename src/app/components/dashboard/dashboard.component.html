@@ -23,12 +23,12 @@
 
     <div class="side-nav">
         <div class="logo-area">
-            <img src="assets/Images/logo.png" alt="Asprime Partners logo" width="230rem" height="auto" routerLink="customer-sales" (click)="updatePageTitle('Customer Sales')"/>
+            <img src="assets/Images/logo.png" alt="Asprime Partners logo" width="220rem" height="auto" routerLink="customer-sales" (click)="updatePageTitle('Customer Sales')"/>
         </div>
         <div class="side-nav-btn-area">
-              <a routerLink="customer-sales"><button class="btn" (click)="updatePageTitle('Customer Sales')"><fa-icon [icon]="faSackDollar"></fa-icon>  Customer Sales</button></a>
-              <a routerLink="upload-documents"><button class="btn" (click)="updatePageTitle('Upload Document')"><fa-icon [icon]="faCloudArrowUp"></fa-icon> Upload Document</button></a>
-              <a routerLink="change-password"><button class="btn" (click)="updatePageTitle('Change Password')"><fa-icon [icon]="faKey"></fa-icon>  Change Password</button></a>
+              <a routerLink="customer-sales"><button class="btn" (click)="updatePageTitle('Customer Sales')" [ngClass]="{'active-color': title === 'Customer Sales'}"><fa-icon [icon]="faSackDollar"></fa-icon>  Customer Sales</button></a>
+              <a routerLink="upload-documents"><button class="btn" (click)="updatePageTitle('Upload Document')" [ngClass]="{'active-color': title === 'Upload Document'}"><fa-icon [icon]="faCloudArrowUp"></fa-icon> Upload Document</button></a>
+              <a routerLink="change-password"><button class="btn" (click)="updatePageTitle('Change Password')" [ngClass]="{'active-color': title === 'Change Password'}"><fa-icon [icon]="faKey"></fa-icon>  Change Password</button></a>
         </div>
     </div>
     <div class="main-content">

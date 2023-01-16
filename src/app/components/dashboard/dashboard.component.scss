@@ -13,6 +13,10 @@
     display: none;
 }
 
+.active-color {
+    background-color: rgb(252, 182, 50);
+}
+
 $border-color: rgb(213, 213, 213);
 
 .side-nav {
@@ -62,6 +66,7 @@ $border-color: rgb(213, 213, 213);
         button:hover {
             background-color: rgb(255, 171, 61);
             color: black;
+            font-weight: bold;
         }
 
     }
