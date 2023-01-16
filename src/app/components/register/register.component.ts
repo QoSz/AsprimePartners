@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-register',
@@ -6,4 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  faArrowLeft: IconDefinition = faArrowLeft;
 }

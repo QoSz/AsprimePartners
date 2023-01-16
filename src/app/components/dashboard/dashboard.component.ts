@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
+import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +12,9 @@ import { Location } from '@angular/common';
 })
 export class DashboardComponent implements OnInit {
   title: string = "Customer Sales"
+  faSackDollar: IconDefinition = faSackDollar;
+  faCloudArrowUp: IconDefinition = faCloudArrowUp;
+  faKey: IconDefinition = faKey;
 
   constructor(private location: Location  ) {}
 
