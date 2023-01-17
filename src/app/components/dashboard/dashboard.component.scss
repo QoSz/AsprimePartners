@@ -69,6 +69,14 @@ $border-color: rgb(213, 213, 213);
             font-weight: bold;
         }
 
+        .user-name-btn:disabled {
+            border: none;
+        }
+
+        .user-name-icon {
+            
+            font-size: 1.8rem;
+        }
     }
 }
 
