@@ -17,8 +17,11 @@ export class DashboardComponent implements OnInit {
   faCloudArrowUp: IconDefinition = faCloudArrowUp;
   faKey: IconDefinition = faKey;
   faCircleUser: IconDefinition = faCircleUser;
+  currentYear: number;
 
-  constructor(private location: Location  ) {}
+  constructor(private location: Location  ) {
+    this.currentYear = new Date().getFullYear();
+  }
 
   ngOnInit() {
     const fullUrl: string = this.location.path().replace('/dashboard/', '');

@@ -9,4 +9,9 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 })
 export class RegisterComponent {
   faArrowLeft: IconDefinition = faArrowLeft;
+  currentYear: number;
+
+  constructor() {
+    this.currentYear = new Date().getFullYear();
+  }
 }

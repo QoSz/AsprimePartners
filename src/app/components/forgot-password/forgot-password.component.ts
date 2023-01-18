@@ -9,5 +9,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class ForgotPasswordComponent {
   faArrowLeft: IconDefinition = faArrowLeft;
+  currentYear: number;
 
+  constructor() {
+    this.currentYear = new Date().getFullYear();
+  }
 }
