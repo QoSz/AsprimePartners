@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { NgbDate, NgbCalendar, NgbDateParserFormatter, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
+import { NgbDate, NgbCalendar, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { DatePipe } from '@angular/common';
 
 @Component({
-	selector: 'ngbd-datepicker-range-popup',
+    selector: 'ngbd-datepicker-range-popup',
 	standalone: true,
-	imports: [NgbDatepickerModule, FormsModule, JsonPipe],
-	templateUrl: './datepicker-range-popup.component.html',
-	styleUrls: ['./datepicker-range-popup.component.scss']
+    templateUrl: './datepicker-range-popup.component.html',
+    styleUrls: ['./datepicker-range-popup.component.scss'],
+    imports: [NgbDatepickerModule, DatePipe],
+	providers: [DatePipe],
 })
 
 export class NgbdDatepickerRangePopup {
@@ -16,9 +17,9 @@ export class NgbdDatepickerRangePopup {
 	fromDate: NgbDate | null;
 	toDate: NgbDate | null;
 
-	constructor(private calendar: NgbCalendar, public formatter: NgbDateParserFormatter) {
-		this.fromDate = calendar.getToday();
-		this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
+	constructor(private calendar: NgbCalendar, private formatter: NgbDateParserFormatter) {
+		this.fromDate = null;
+		this.toDate = null;
 	}
 
 	onDateSelection(date: NgbDate): void {
@@ -52,7 +53,22 @@ export class NgbdDatepickerRangePopup {
 	}
 
 	validateInput(currentValue: NgbDate | null, input: string): NgbDate | null {
+		if(!input) return currentValue;
 		const parsed = this.formatter.parse(input);
 		return parsed && this.calendar.isValid(NgbDate.from(parsed)) ? NgbDate.from(parsed) : currentValue;
+	}
+
+	formatDate(date: NgbDate): string {
+		if (!date) return '';
+		let d = new Date(date.year, date.month - 1, date.day);
+		return d.toLocaleDateString("en-GB", {
+			day: "2-digit",
+			month: "2-digit",
+			year: "numeric"
+		});
+	}
+
+	formatNgbDate(date: NgbDate): string {
+		return date ? `Day: ${date.day}, Month: ${date.month}, Year: ${date.year}` : '';
 	}
 }
