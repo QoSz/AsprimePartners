@@ -4,8 +4,11 @@
     <div class="mobile-navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" routerLink="/dashboard" (click)="updatePageTitle('Customer Sales')">Asprime <span style="color: orange">Partners</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="nav-brand-name">
+                    <a class="navbar-brand" routerLink="/dashboard" (click)="updatePageTitle('Customer Sales')">Asprime <span style="color: orange">Partners</span></a>
+                </div>
+                    <a class="nav-link nav-link-username" disabled><fa-icon class="user-name-icon" [icon]="faCircleUser"></fa-icon> John Doe</a>
+                <button class="navbar-toggler toggler-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

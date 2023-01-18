@@ -11,6 +11,21 @@
 
 .mobile-navbar {
     display: none;
+
+    .nav-link-username {
+        color: white;
+    }
+
+    .nav-brand-name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: auto;
+    }
+
+    .toggler-btn {
+        margin-left: 1rem;
+    }
 }
 
 .active-color {
@@ -21,7 +36,6 @@ $border-color: rgb(213, 213, 213);
 
 .side-nav {
     grid-area: sidebar;
-    // background-color: aqua;
     display: grid;
     grid-template-rows: 3fr 9fr;
     grid-template-areas:
@@ -32,24 +46,18 @@ $border-color: rgb(213, 213, 213);
 
     .logo-area {
         grid-area: logo;
-        // background-color: purple;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid $border-color;
-
     }
 
     .side-nav-btn-area {
         grid-area: sidenav;
-        // background-color: rgb(231, 49, 255);
-
         a {
             text-decoration: none;
         }
 
         button {
-            // align the button to the center of the div
             display: block;
             margin: 0 auto;
             width: 100%;
@@ -72,6 +80,7 @@ $border-color: rgb(213, 213, 213);
         .user-name-btn:disabled {
             border: none;
             border-bottom: 1px solid $border-color;
+            padding-top: 0;
         }
 
         .user-name-icon {
@@ -83,7 +92,6 @@ $border-color: rgb(213, 213, 213);
 
 .main-content {
     grid-area: content;
-    // background-color: rgb(255, 116, 41);
     display: grid;
     grid-template-rows: 1fr 11fr;
     grid-template-areas:
@@ -92,7 +100,6 @@ $border-color: rgb(213, 213, 213);
 
     .title-area {
         grid-area: title;
-        // background-color: rgb(255, 255, 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -100,7 +107,6 @@ $border-color: rgb(213, 213, 213);
 
     .main-area {
         grid-area: main;
-        // background-color: rgb(255, 0, 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -110,7 +116,6 @@ $border-color: rgb(213, 213, 213);
 
 .footer-area {
     grid-area: footer;
-    // background-color: rgb(17, 255, 176);
     display: flex;
     justify-content: center;
     align-items: center;
