@@ -23,6 +23,7 @@ import { NgbdDatepickerRangePopup } from './components/datepicker-range-popup/da
     NgxDropzoneModule,
     FontAwesomeModule,
     NgbdDatepickerRangePopup
-  ]
+  ],
+  exports: [DashboardComponent, CustomerSalesComponent, UploadDocumentComponent, ChangePasswordComponent]
 })
 export class DashboardModule { }
