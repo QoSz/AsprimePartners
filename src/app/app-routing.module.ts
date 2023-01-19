@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CustomerSalesComponent } from './components/dashboard/components/customer-sales/customer-sales.component';
 import { UploadDocumentComponent } from './components/dashboard/components/upload-document/upload-document.component';
 import { ChangePasswordComponent } from './components/dashboard/components/change-password/change-password.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -20,7 +21,7 @@ const routes: Routes = [
     { path: 'change-password', component: ChangePasswordComponent },
   ]},
   { path: '**', redirectTo: '/page-not-found' },
-  { path: 'page-not-found', component: LoginComponent }
+  { path: 'page-not-found', component: PageNotFoundComponent }
 ];
 
 @NgModule({

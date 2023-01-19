@@ -4,6 +4,7 @@ import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
 import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
@@ -17,6 +18,7 @@ export class DashboardComponent implements OnInit {
   faCloudArrowUp: IconDefinition = faCloudArrowUp;
   faKey: IconDefinition = faKey;
   faCircleUser: IconDefinition = faCircleUser;
+  faPowerOff: IconDefinition = faPowerOff;
   currentYear: number;
 
   constructor(private location: Location  ) {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faFaceFrown, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-page-not-found',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-not-found.component.scss']
 })
 export class PageNotFoundComponent {
+  faFaceFrown: IconDefinition = faFaceFrown;
 
 }
