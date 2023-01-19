@@ -6,9 +6,12 @@ import { UploadDocumentComponent } from './components/upload-document/upload-doc
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
-  // { path: 'change-password', component: ChangePasswordComponent },
-  // { path: 'upload-documents', component: UploadDocumentComponent },  
-  // { path: 'customer-sales', component: CustomerSalesComponent },
+  { path: '', redirectTo: 'customer-sales', pathMatch: 'full'},
+  { path: '', component: DashboardComponent, children: [
+    { path: 'customer-sales', component: CustomerSalesComponent },
+    { path: 'upload-documents', component: UploadDocumentComponent },
+    { path: 'change-password', component: ChangePasswordComponent },
+  ]}
 ];
 
 @NgModule({

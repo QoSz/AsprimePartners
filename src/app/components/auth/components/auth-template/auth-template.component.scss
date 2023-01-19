@@ -1,4 +1,4 @@
-.login-container {
+.template-container {
     width: 100%;
     height: 100vh;
     display: grid;
@@ -25,21 +25,11 @@
     margin-top: 1rem;
 }
 
-.form-area {
+.form-div {
     grid-area: form;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    a {
-        color: black;
-    }
-
-    .card {
-        width: 35rem;
-        background-color: rgb(252, 252, 252);
-        box-shadow: 0 0 10px 0 rgba(48, 48, 48, 0.2);
-    }
 }
 
 .footer-area {
@@ -49,25 +39,9 @@
     align-items: center;
 }
 
-// create a media query for mobile devices to make the layout suitable for mobile viewing
+
 @media only screen and (max-width: 600px) {
-    .login-container {
+    .template-container {
         grid-template-rows: 1fr 10fr 1fr;
-        grid-template-areas:
-            "logo"
-            "form"
-            "footer";
-    }
-
-    .logo-area {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "logo";
-    }
-
-    .form-area {
-        .card {
-            width: 95%;
-        }
     }
 }

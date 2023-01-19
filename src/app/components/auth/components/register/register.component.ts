@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faArrowLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register',
@@ -9,9 +8,4 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 })
 export class RegisterComponent {
   faArrowLeft: IconDefinition = faArrowLeft;
-  currentYear: number;
-
-  constructor() {
-    this.currentYear = new Date().getFullYear();
-  }
 }

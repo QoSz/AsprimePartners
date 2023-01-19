@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-forgot-password',
@@ -9,9 +8,4 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class ForgotPasswordComponent {
   faArrowLeft: IconDefinition = faArrowLeft;
-  currentYear: number;
-
-  constructor() {
-    this.currentYear = new Date().getFullYear();
-  }
 }
