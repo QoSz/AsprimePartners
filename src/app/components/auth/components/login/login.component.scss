@@ -1,8 +1,7 @@
 .form-area {
     grid-area: form;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;    
 
     a {
         color: black;
