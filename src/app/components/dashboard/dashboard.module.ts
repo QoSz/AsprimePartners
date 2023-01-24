@@ -8,6 +8,9 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbdDatepickerRangePopup } from './components/datepicker-range-popup/datepicker-range-popup.component';
+import { TableComponent } from './components/customer-sales/component/table/table.component';
+import { DataTablesModule } from 'angular-datatables';
+
 
 @NgModule({
   declarations: [
@@ -15,13 +18,15 @@ import { NgbdDatepickerRangePopup } from './components/datepicker-range-popup/da
     CustomerSalesComponent,
     UploadDocumentComponent,
     ChangePasswordComponent,
+    TableComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     NgxDropzoneModule,
     FontAwesomeModule,
-    NgbdDatepickerRangePopup
+    NgbdDatepickerRangePopup,
+    DataTablesModule
   ],
   exports: [DashboardComponent, CustomerSalesComponent, UploadDocumentComponent, ChangePasswordComponent]
 })

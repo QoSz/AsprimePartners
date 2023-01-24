@@ -1,0 +1,19 @@
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+  <thead>
+    <tr>
+      <th (click)="sortTable('date')">Date</th>
+      <th (click)="sortTable('software')">Software</th>
+      <th (click)="sortTable('shop')">Shop</th>
+      <th (click)="sortTable('value')">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of tableData">
+      <td>{{data.date | date:'dd/MM/yyyy'}}</td>
+      <td>{{data.software}}</td>
+      <td>{{data.shop}}</td>
+      <td>{{data.value | currency:'KSH ':'symbol':'1.2-2'}}</td>
+    </tr>
+  </tbody>
+</table>
+
