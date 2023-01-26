@@ -49,6 +49,10 @@ $border-color: rgb(213, 213, 213);
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+            padding: 1.2rem;
+        }
     }
 
     .side-nav-btn-area {
@@ -121,6 +125,11 @@ $border-color: rgb(213, 213, 213);
     align-items: center;
 }
 
+
+::ng-deep #DataTables_Table_0_length label select{
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .dashboard-container {
         grid-template-columns: 1fr;
@@ -140,3 +149,4 @@ $border-color: rgb(213, 213, 213);
         display: none;
     }
 }
+

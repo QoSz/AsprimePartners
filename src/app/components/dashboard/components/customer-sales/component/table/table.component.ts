@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
   dtOptions: any = {};
 
-  tableData = [
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  tableData: {date: Date, software: string, shop: string, value: number}[] = [
     { date: new Date(2022, 11, 9), software: 'Easy PosLite', shop: 'NSH', value: 30000 },
     { date: new Date(2021, 5, 15), software: 'Adobe Photoshop', shop: 'Best Buy', value: 20099 },
     { date: new Date(2022, 3, 30), software: 'Windows 10 Pro', shop: 'Microsoft Store', value: 19999 },
@@ -34,10 +37,12 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      order: [[0, 'asc']]
+      order: [[0, 'asc']],
+      responsive: true
     };
   }
-  sortTable(col: string) {
+  
+  sortTable(col: string): void {
     if(this.currentSort === col) {
         this.sortDirection = this.sortDirection === "asc" ? "desc" : "asc";
     } else {
