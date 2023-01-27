@@ -38,7 +38,7 @@ export class TableComponent implements OnInit {
     this.dtOptions = {
       pagingType: 'full_numbers',
       order: [[0, 'asc']],
-      responsive: true
+      // responsive: true
     };
   }
   

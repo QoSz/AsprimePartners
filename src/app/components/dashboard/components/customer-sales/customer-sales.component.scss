@@ -1,0 +1,17 @@
+:host-context(.main-area) {
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    :host-context(.main-area) {
+        // justify-content: unset;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    :host-context(.main-area) {
+        justify-content: unset;
+    }
+}

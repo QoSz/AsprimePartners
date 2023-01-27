@@ -126,7 +126,7 @@ $border-color: rgb(213, 213, 213);
 }
 
 
-::ng-deep #DataTables_Table_0_length label select{
+::ng-deep #DataTables_Table_0_length label select {
     width: 100%;
 }
 
@@ -150,3 +150,27 @@ $border-color: rgb(213, 213, 213);
     }
 }
 
+::ng-deep #DataTables_Table_0_wrapper  {
+    .row {
+        .col-md-5 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-md-7 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    // CSS styles for the customer sales table fileter options
+    ::ng-deep #DataTables_Table_0_wrapper .row {
+        display: flow-root;
+    }
+} 
