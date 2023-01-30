@@ -2,7 +2,7 @@
 
     <!-- Create a bootstrap toggler nav bar that is black -->
     <div class="mobile-navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
             <div class="container-fluid">
                 <div class="nav-brand-name">
                     <a class="navbar-brand" routerLink="/dashboard" (click)="updatePageTitle('Customer Sales')">Asprime <span style="color: orange">Partners</span></a>
@@ -16,6 +16,7 @@
                         <a class="nav-link active" aria-current="page" routerLink="customer-sales" (click)="updatePageTitle('Customer Sales')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faSackDollar"></fa-icon> Customer Sales</a>
                         <a class="nav-link" routerLink="upload-documents" (click)="updatePageTitle('Upload Document')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faCloudArrowUp"></fa-icon> Upload Document</a>
                         <a class="nav-link" routerLink="change-password" (click)="updatePageTitle('Change Password')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faKey"></fa-icon> Change Password</a>
+                        <a class="nav-link" routerLink="/login" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><fa-icon [icon]="faPowerOff"></fa-icon> Logout</a>
                     </div>
                 </div>
             </div>

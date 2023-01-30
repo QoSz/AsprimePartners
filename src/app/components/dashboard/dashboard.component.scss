@@ -12,6 +12,10 @@
 .mobile-navbar {
     display: none;
 
+    .navbar-background {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
     .nav-link-username {
         color: white;
     }
@@ -156,5 +160,11 @@ $border-color: rgb(213, 213, 213);
     // CSS styles for the customer sales table fileter options
     ::ng-deep #DataTables_Table_0_wrapper .row {
         display: flow-root;
+    }
+}
+
+@media (max-width: 376px) {
+    .nav-link-username {
+        display: none;
     }
 }

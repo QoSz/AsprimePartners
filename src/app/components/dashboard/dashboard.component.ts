@@ -42,11 +42,4 @@ export class DashboardComponent implements OnInit {
   updatePageTitle(title: string): void {
     this.title = title;
   }
-
-  refreshPage(): void {
-    // sleep for 5 seconds
-    setTimeout(() => {
-      window.location.reload();
-    }, 0.1);
-  }
 }

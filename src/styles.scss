@@ -41,6 +41,9 @@ app-customer-sales {
     align-items: center;
 }
 
+div.dataTables_wrapper div.dataTables_info {
+    padding: 1rem 0;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
