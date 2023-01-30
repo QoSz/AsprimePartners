@@ -6,6 +6,7 @@ import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { timeInterval } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,7 +22,7 @@ export class DashboardComponent implements OnInit {
   faPowerOff: IconDefinition = faPowerOff;
   currentYear: number;
 
-  constructor(private location: Location  ) {
+  constructor(private location: Location) {
     this.currentYear = new Date().getFullYear();
   }
 
@@ -40,5 +41,12 @@ export class DashboardComponent implements OnInit {
 
   updatePageTitle(title: string): void {
     this.title = title;
+  }
+
+  refreshPage(): void {
+    // sleep for 5 seconds
+    setTimeout(() => {
+      window.location.reload();
+    }, 0.1);
   }
 }

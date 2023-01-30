@@ -1,0 +1,9 @@
+::ng-deep div.dataTables_wrapper div.dataTables_length select {
+    width: 100%;
+    display: inline-block;
+}
+
+::ng-deep div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+}

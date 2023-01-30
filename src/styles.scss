@@ -17,6 +17,31 @@
     background-color: #5affff;
     text-shadow: none;
 }
+
+// Make the app customer sales component have a width of 90%
+app-customer-sales {
+    width: 90%;
+}
+
+.table-container .row {
+    padding: 1rem 0;
+}
+    
+.table-container .row .col-sm-12.col-md-5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.table-container .row .col-sm-12.col-md-7 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
